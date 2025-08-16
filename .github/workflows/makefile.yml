@@ -18,4 +18,7 @@ jobs:
       run: sudo apt install libsecret-tools libsecret-1-dev
 
     - name: build-nogui
+      env:
+        GOOS: "linux"
+        GOARCH: "arm64"
       run: make build-nogui
