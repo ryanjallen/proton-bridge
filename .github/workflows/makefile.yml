@@ -14,6 +14,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Setup cross
+      run: sudo dpkg --add-architecture arm64 && sudo apt update
+
     - name: Install dependencies
       run: sudo apt install libsecret-1-dev:arm64 gcc-aarch64-linux-gnu
 
