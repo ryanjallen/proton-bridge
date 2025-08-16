@@ -15,7 +15,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install dependencies
-      run: apt install libsecret-tools
+      run: sudo apt install libsecret-tools
 
     - name: build-nogui
       run: make build-nogui
